@@ -1,0 +1,42 @@
+section {
+    overflow: scroll;
+}
+  
+table.fibonacci-table {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-collapse: collapse;
+}
+.fibonacci-table tbody tr  {
+    height: 50px;
+}
+
+.fibonacci-table tbody > tr > td {
+    border: 1px solid #282c34;
+    padding: 10px;
+    margin: 210px;
+    border-collapse: collapse;
+    width: 30;
+    height: 30;
+    min-width: 50px;
+    cursor: pointer;
+    transition: background-color 1s linear;
+}
+
+.fibonacci-table tbody > tr > td:hover {
+    background-color: lightgray;
+}
+  
+.fibonacci-table tbody > tr > td.selected {
+    transition: background-color 1s linear;
+    background-color: yellow;
+}
+
+  
+.fibonacci-table tbody > tr > td.cleared {
+    transition: background-color 1s linear;
+    background-color: green;
+}
+
+

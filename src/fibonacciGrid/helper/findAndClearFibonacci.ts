@@ -1,5 +1,3 @@
-import find from './findAndClearFibonacci'
-
 const createCopy = (list) => list.map((v) => {
     return v.slice()
 })
@@ -20,7 +18,6 @@ const findAndClearFibonacci = (list: number[][], numberOfSequence: number) => {
 
             const currentVertical = horizontalListCopy[y] ? horizontalListCopy[y][x] : null
             const currentHorizontal = horizontalListCopy[x][y]
-         
 
             if (currentVertical === verticalFibonacci) {
                 if (verticalFibonaccis.length === 0) {
@@ -28,11 +25,9 @@ const findAndClearFibonacci = (list: number[][], numberOfSequence: number) => {
                     verticalFibonaccis.push(SecondIndex)
                 }
                 verticalFibonaccis.push(y)
-            
             } else {
                 verticalFibonaccis = []
             }
-
 
             if (currentHorizontal === horizontalFibonacci) {
                 if (horizontalFibonaccis.length === 0) {
