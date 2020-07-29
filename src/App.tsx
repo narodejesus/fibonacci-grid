@@ -2,7 +2,7 @@ import React from 'react';
 import FibonacciGrid from './fibonacciGrid'
 import './App.css'
 
-const App = () => {
+const App = (): JSX.Element => {
   return (
     <div className="App">
       <header className="App-header">
