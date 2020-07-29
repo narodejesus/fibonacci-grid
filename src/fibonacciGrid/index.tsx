@@ -5,14 +5,14 @@ import findAndClearFibonacci from './helper/findAndClearFibonacci'
 import generateGrid from './helper/generateGrid'
 import {Grid} from './types'
 
-const incrementColumns = (grid: Grid[], columnIndex: number, rowIndex: number) => grid.map((rows: Grid, i: number) => {
+const incrementColumn = (grid: Grid[], columnIndex: number, rowIndex: number) => grid.map((rows: Grid, i: number) => {
   if (columnIndex !== i) {
     rows[rowIndex] += 1
   }
   return rows
 })
 
-const incrementRows = (grid: Grid[], columnIndex: number) => {
+const incrementRow = (grid: Grid[], columnIndex: number) => {
   grid[columnIndex] = grid[columnIndex].map((value: number) => value + 1)
 
   return grid
@@ -27,8 +27,8 @@ const FibonacciGrid = (): JSX.Element => {
 
   const handleOnClickBox = (index: number, rowIndex: number) => () => {
     let newGrid = grid.slice()
-    newGrid = incrementColumns(newGrid, rowIndex, index)
-    newGrid = incrementRows(newGrid, rowIndex)
+    newGrid = incrementColumn(newGrid, rowIndex, index)
+    newGrid = incrementRow(newGrid, rowIndex)
     newGrid = findAndClearFibonacci(newGrid, 5)
     setGrid(newGrid)
   }
