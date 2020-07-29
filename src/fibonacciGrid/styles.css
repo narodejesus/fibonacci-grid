@@ -21,17 +21,14 @@ table.fibonacci-table {
     height: 30;
     min-width: 50px;
     cursor: pointer;
-    transition: background-color 0.5s linear;
 }
 
 .fibonacci-table tbody > tr > td.selected {
-    transition: background-color 0.5s linear;
     background-color: yellow;
 }
 
   
 .fibonacci-table tbody > tr > td.cleared {
-    transition: background-color 1s linear;
     background-color: green;
 }
 
