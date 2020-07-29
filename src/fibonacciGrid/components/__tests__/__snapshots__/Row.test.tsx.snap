@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Row component renders row component 1`] = `
+<body>
+  <div>
+    <table>
+      <tbody>
+        <tr>
+          <td />
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+`;
+
+exports[`Row component renders row component with rowValue 1`] = `
+<body>
+  <div>
+    <table>
+      <tbody>
+        <tr>
+          <td
+            class="selected"
+          >
+            1
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+`;

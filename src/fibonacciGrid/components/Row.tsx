@@ -3,6 +3,7 @@ import React, {useEffect, useState, memo} from 'react'
 type Props = {
     onClick: () => void
     rowValue: number
+    testId: string
 }
 
 
@@ -46,11 +47,12 @@ const useRowState = (rowValue: number): RowState => {
     return rowState
 }
 
-const Row = ({onClick, rowValue}: Props): JSX.Element => {
+const Row = ({onClick, rowValue, testId}: Props): JSX.Element => {
     const rowState = useRowState(rowValue)
 
     return (
         <td 
+            data-testid={testId}
             className={rowState} 
             onClick={onClick}>
                 {rowValue || ''}

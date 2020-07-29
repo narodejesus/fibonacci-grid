@@ -6,16 +6,16 @@ import generateGrid from './helper/generateGrid'
 import {Grid} from './types'
 
 const incrementColumns = (grid: Grid[], columnIndex: number, rowIndex: number) => grid.map((rows: Grid, i: number) => {
-    if (columnIndex !== i) {
-      rows[rowIndex] += 1
-    }
-    return rows
-  })
+  if (columnIndex !== i) {
+    rows[rowIndex] += 1
+  }
+  return rows
+})
 
 const incrementRows = (grid: Grid[], columnIndex: number) => {
-     grid[columnIndex] = grid[columnIndex].map((value: number) => value + 1)
+  grid[columnIndex] = grid[columnIndex].map((value: number) => value + 1)
 
-     return grid
+  return grid
 }
 const FibonacciGrid = (): JSX.Element => {
   const [grid, setGrid] = useState([])
@@ -43,6 +43,7 @@ const FibonacciGrid = (): JSX.Element => {
                             key={`row-${index}`}
                             onClick={handleOnClickBox(index, rowIndex)}
                             rowValue={rowValue}
+                            testId={`row-${rowIndex}-${index}`}
                         />
                     ))}
                 </tr>
