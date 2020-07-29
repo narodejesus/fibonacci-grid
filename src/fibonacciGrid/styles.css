@@ -12,7 +12,7 @@ table.fibonacci-table {
     height: 50px;
 }
 
-.fibonacci-table tbody > tr > td, .box {
+.fibonacci-table tbody > tr > td {
     border: 1px solid #282c34;
     padding: 10px;
     margin: 210px;
@@ -24,13 +24,13 @@ table.fibonacci-table {
     transition: background-color 0.5s linear;
 }
 
-.fibonacci-table tbody > tr > td .box .selected {
+.fibonacci-table tbody > tr > td.selected {
     transition: background-color 0.5s linear;
     background-color: yellow;
 }
 
   
-.fibonacci-table tbody > tr > td .cleared {
+.fibonacci-table tbody > tr > td.cleared {
     transition: background-color 1s linear;
     background-color: green;
 }
